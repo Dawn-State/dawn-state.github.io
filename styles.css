@@ -58,9 +58,41 @@ h3 {
     margin: 28px 0 10px;
 }
 
-.area-label {
+details {
+    margin-bottom: 10px;
+}
+
+details summary {
     color: var(--muted);
-    margin-bottom: 6px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+details summary::before {
+    content: "▸";
+    color: var(--muted);
+    font-size: 12px;
+    transition: transform 0.15s;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary:hover {
+    color: var(--strong);
+}
+
+details p {
+    margin: 6px 0 0 18px;
 }
 
 p {
