@@ -59,40 +59,49 @@ h3 {
 }
 
 details {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 details summary {
-    color: var(--muted);
+    color: var(--text);
     cursor: pointer;
     user-select: none;
     list-style: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+    padding: 4px 8px;
+    margin-left: -8px;
+    border-radius: 4px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+details summary:hover {
+    color: var(--strong);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 details summary::before {
     content: "▸";
     color: var(--muted);
-    font-size: 12px;
-    transition: transform 0.15s;
+    font-size: 16px;
+    transition: transform 0.15s, color 0.15s;
 }
 
 details[open] summary::before {
     transform: rotate(90deg);
+    color: var(--strong);
 }
 
 details summary::-webkit-details-marker {
     display: none;
 }
 
-details summary:hover {
-    color: var(--strong);
-}
-
 details p {
-    margin: 6px 0 0 18px;
+    margin: 8px 0 16px 20px;
+    padding-left: 12px;
+    border-left: 1px solid var(--text);
+    color: var(--muted);
 }
 
 p {
