@@ -56,6 +56,15 @@ h3 {
     font-size: 16px;
     line-height: 1.25;
     margin: 28px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+h3 a {
+    font-size: 14px;
+    font-weight: normal;
 }
 
 details {
@@ -93,17 +102,6 @@ details summary:hover {
 
 details p {
     margin: 6px 0 0 18px;
-}
-
-.bio {
-    color: var(--muted);
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.bio strong {
-    color: var(--muted);
-    font-size: 14px;
 }
 
 p {
